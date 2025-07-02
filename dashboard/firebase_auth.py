@@ -1,4 +1,5 @@
-import pyrebase
+import pyrebase4 as pyrebase
+
 import firebase_admin
 from firebase_admin import credentials, firestore
 import streamlit as st
