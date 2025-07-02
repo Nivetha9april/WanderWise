@@ -1,6 +1,8 @@
 streamlit
-firebase-admin
 pyrebase4
-pandas
+firebase-admin
+gcloud
+reportlab
 matplotlib
+pandas
 reportlab
