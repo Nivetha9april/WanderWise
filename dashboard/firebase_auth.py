@@ -1,4 +1,4 @@
-import pyrebase4 as pyrebase
+import pyrebase
 
 import firebase_admin
 from firebase_admin import credentials, firestore
