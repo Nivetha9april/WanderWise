@@ -1,5 +1,6 @@
 streamlit
 pyrebase4
+google-cloud-storage
 firebase-admin
 gcloud
 reportlab
