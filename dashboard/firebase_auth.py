@@ -1,62 +1,53 @@
-import pyrebase
+
+
 
 import firebase_admin
 from firebase_admin import credentials, firestore
+
 import streamlit as st
+import firebase_admin
+from firebase_admin import credentials, auth, firestore
+import requests
 
-# ----------------------------
-# 🔐 Pyrebase Configuration
-# ----------------------------
-firebaseConfig = {
-    "apiKey": st.secrets["firebase"]["apiKey"],
-    "authDomain": st.secrets["firebase"]["authDomain"],
-    "projectId": st.secrets["firebase"]["projectId"],
-    "storageBucket": st.secrets["firebase"]["storageBucket"],
-    "messagingSenderId": st.secrets["firebase"]["messagingSenderId"],
-    "appId": st.secrets["firebase"]["appId"],
-    "databaseURL": st.secrets["firebase"]["databaseURL"]
-}
-
-# ✅ Initialize Pyrebase Auth
-firebase = pyrebase.initialize_app(firebaseConfig)
-auth = firebase.auth()
-
-# ----------------------------
-# 🔐 Firebase Admin (for Firestore)
-# ----------------------------
-if not firebase_admin._apps:  # ✅ Prevent multiple initializations
-    cred = credentials.Certificate("firebase_key.json")
+# --- Initialize Firebase App only once ---
+if not firebase_admin._apps:
+    cred = credentials.Certificate(r"/home/nivetha-g/Tourist application/dashboard/firebase_key.json")
     firebase_admin.initialize_app(cred)
 
 db = firestore.client()
 
-# ----------------------------
-# 👤 Auth Functions
-# ----------------------------
-def register_user(email, password):
-    return auth.create_user_with_email_and_password(email, password)
-
-def login_user(email, password):
-    return auth.sign_in_with_email_and_password(email, password)
-
+# Anonymous sign in placeholder
 def anon_sign_in():
-    return {"localId": "anonymous_user"}
+    return {"localId": "guest_user"}
 
-# ----------------------------
-# 📦 Wishlist Firestore Handling
-# ----------------------------
-def save_wishlist(user_id, item):
-    ref = db.collection("users").document(user_id)
-    doc = ref.get()
-    if doc.exists:
-        current_list = doc.to_dict().get("wishlist", [])
+# Register user using Firebase Identity REST API
+def register_user(email, password):
+    url = f"https://identitytoolkit.googleapis.com/v1/accounts:signUp?key={st.secrets['firebase']['apiKey']}"
+    payload = {"email": email, "password": password, "returnSecureToken": True}
+    res = requests.post(url, json=payload)
+    if res.status_code == 200:
+        return res.json()
     else:
-        current_list = []
-    current_list.append(item)
-    ref.set({"wishlist": current_list})
+        raise Exception(res.json()["error"]["message"])
 
-def get_wishlist(user_id):
-    doc = db.collection("users").document(user_id).get()
+# Login user using Firebase Identity REST API
+def login_user(email, password):
+    url = f"https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key={st.secrets['firebase']['apiKey']}"
+    payload = {"email": email, "password": password, "returnSecureToken": True}
+    res = requests.post(url, json=payload)
+    if res.status_code == 200:
+        return res.json()
+    else:
+        raise Exception(res.json()["error"]["message"])
+
+# Save event to Firestore wishlist
+def save_wishlist(uid, event_data):
+    doc_ref = db.collection("wishlists").document(uid)
+    doc_ref.set({event_data['name']: event_data}, merge=True)
+
+# Get wishlist from Firestore
+def get_wishlist(uid):
+    doc = db.collection("wishlists").document(uid).get()
     if doc.exists:
-        return doc.to_dict().get("wishlist", [])
+        return list(doc.to_dict().values())
     return []
