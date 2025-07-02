@@ -1,0 +1,6 @@
+streamlit
+firebase-admin
+pyrebase4
+pandas
+matplotlib
+reportlab

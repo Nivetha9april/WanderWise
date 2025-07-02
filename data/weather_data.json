@@ -1,0 +1,282 @@
+[
+  {
+    "city": "Thailand",
+    "temperature": 31.2,
+    "description": "Partly Cloudy"
+  },
+  {
+    "city": "Turkey",
+    "temperature": 14.3,
+    "description": "Sunny"
+  },
+  {
+    "city": "United Kingdom",
+    "temperature": 21.1,
+    "description": "Cloudy"
+  },
+  {
+    "city": "Hong Kong",
+    "temperature": 30.0,
+    "description": "Overcast"
+  },
+  {
+    "city": "Saudi Arabia",
+    "temperature": 31.2,
+    "description": "Sunny"
+  },
+  {
+    "city": "United Arab Emirates",
+    "temperature": 32.1,
+    "description": "Sunny"
+  },
+  {
+    "city": "Macau",
+    "temperature": 23.2,
+    "description": "Partly Cloudy"
+  },
+  {
+    "city": "France",
+    "temperature": 22.2,
+    "description": "Sunny"
+  },
+  {
+    "city": "Malaysia",
+    "temperature": 31.4,
+    "description": "Sunny"
+  },
+  {
+    "city": "Chennai",
+    "temperature": 33.2,
+    "description": "Partly cloudy"
+  },
+  {
+    "city": "Coimbatore",
+    "temperature": 27.3,
+    "description": "Mist"
+  },
+  {
+    "city": "Madurai",
+    "temperature": 33.1,
+    "description": "Partly cloudy"
+  },
+  {
+    "city": "Tiruchirappalli",
+    "temperature": 32.0,
+    "description": "Partly cloudy"
+  },
+  {
+    "city": "Salem",
+    "temperature": 27.2,
+    "description": "Sunny"
+  },
+  {
+    "city": "Thanjavur",
+    "temperature": 32.0,
+    "description": "Partly cloudy"
+  },
+  {
+    "city": "Kanyakumari",
+    "temperature": 28.8,
+    "description": "Sunny"
+  },
+  {
+    "city": "Rameswaram",
+    "temperature": 28.7,
+    "description": "Sunny"
+  },
+  {
+    "city": "Tirunelveli",
+    "temperature": 31.7,
+    "description": "Sunny"
+  },
+  {
+    "city": "Erode",
+    "temperature": 28.1,
+    "description": "Sunny"
+  },
+  {
+    "city": "Bengaluru",
+    "temperature": 24.1,
+    "description": "Partly cloudy"
+  },
+  {
+    "city": "Mysore",
+    "temperature": 24.7,
+    "description": "Partly Cloudy"
+  },
+  {
+    "city": "Mangalore",
+    "temperature": 25.1,
+    "description": "Mist"
+  },
+  {
+    "city": "Hubli",
+    "temperature": 23.8,
+    "description": "Patchy rain nearby"
+  },
+  {
+    "city": "Belgaum",
+    "temperature": 22.0,
+    "description": "Light rain shower"
+  },
+  {
+    "city": "Hyderabad",
+    "temperature": 24.3,
+    "description": "Mist"
+  },
+  {
+    "city": "Warangal",
+    "temperature": 24.4,
+    "description": "Light rain shower"
+  },
+  {
+    "city": "Vijayawada",
+    "temperature": 27.3,
+    "description": "Overcast"
+  },
+  {
+    "city": "Visakhapatnam",
+    "temperature": 25.5,
+    "description": "Light drizzle"
+  },
+  {
+    "city": "Mumbai",
+    "temperature": 28.3,
+    "description": "Mist"
+  },
+  {
+    "city": "Pune",
+    "temperature": 22.6,
+    "description": "Patchy rain nearby"
+  },
+  {
+    "city": "Nagpur",
+    "temperature": 26.2,
+    "description": "Mist"
+  },
+  {
+    "city": "Shirdi",
+    "temperature": 24.5,
+    "description": "Patchy rain nearby"
+  },
+  {
+    "city": "Delhi",
+    "temperature": 21.8,
+    "description": "Fog"
+  },
+  {
+    "city": "Agra",
+    "temperature": 29.5,
+    "description": "Cloudy"
+  },
+  {
+    "city": "Jaipur",
+    "temperature": 28.1,
+    "description": "Mist"
+  },
+  {
+    "city": "Udaipur",
+    "temperature": 31.4,
+    "description": "Light rain shower"
+  },
+  {
+    "city": "Jaisalmer",
+    "temperature": 31.4,
+    "description": "Sunny"
+  },
+  {
+    "city": "Lucknow",
+    "temperature": 29.1,
+    "description": "Mist"
+  },
+  {
+    "city": "Varanasi",
+    "temperature": 33.4,
+    "description": "Light rain"
+  },
+  {
+    "city": "Bhopal",
+    "temperature": 24.3,
+    "description": "Light rain"
+  },
+  {
+    "city": "Indore",
+    "temperature": 24.0,
+    "description": "Mist"
+  },
+  {
+    "city": "Gwalior",
+    "temperature": 27.7,
+    "description": "Light rain"
+  },
+  {
+    "city": "Ahmedabad",
+    "temperature": 28.4,
+    "description": "Mist"
+  },
+  {
+    "city": "Surat",
+    "temperature": 28.0,
+    "description": "Light rain shower"
+  },
+  {
+    "city": "Gandhinagar",
+    "temperature": 28.4,
+    "description": "Mist"
+  },
+  {
+    "city": "Kolkata",
+    "temperature": 30.3,
+    "description": "Mist"
+  },
+  {
+    "city": "Darjeeling",
+    "temperature": 21.1,
+    "description": "Patchy light drizzle"
+  },
+  {
+    "city": "Siliguri",
+    "temperature": 24.2,
+    "description": "Patchy rain nearby"
+  },
+  {
+    "city": "Patna",
+    "temperature": 30.2,
+    "description": "Mist"
+  },
+  {
+    "city": "Bodh Gaya",
+    "temperature": 30.0,
+    "description": "Mist"
+  },
+  {
+    "city": "Guwahati",
+    "temperature": 28.0,
+    "description": "Patchy light rain with thunder"
+  },
+  {
+    "city": "Srinagar",
+    "temperature": 25.1,
+    "description": "Patchy rain nearby"
+  },
+  {
+    "city": "Leh",
+    "temperature": 12.8,
+    "description": "Sunny"
+  },
+  {
+    "city": "Manali",
+    "temperature": 12.0,
+    "description": "Patchy rain nearby"
+  },
+  {
+    "city": "Shimla",
+    "temperature": 21.1,
+    "description": "Patchy light rain"
+  },
+  {
+    "city": "Amritsar",
+    "temperature": 26.4,
+    "description": "Mist"
+  }
+]
